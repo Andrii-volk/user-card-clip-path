@@ -1,0 +1,48 @@
+body {
+  background-color: aquamarine;
+}
+.container {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.user-card {
+  display: flex;
+  margin-bottom: 5px;
+  max-width: 500px;
+  min-height: 360px;
+  background-color: antiquewhite;
+}
+.user-avatar {
+  transition: filter .8s;
+  width: 55%;
+  object-fit: cover;
+  object-position: right;
+  clip-path: polygon(0 0, 100% 0, 65% 100%, 0% 100%);
+  filter: blur(15px) sepia(1%) brightness(63%) saturate(280%) contrast(144%);
+  -webkit-filter: sepia(1%) blur(5px) brightness(63%) saturate(280%)
+    contrast(144%);
+  -moz-filter: sepia(1%) brightness(63%) saturate(280%) contrast(144%)
+    blur(15px);
+ 
+}
+.user-avatar:hover {
+  filter: blur(0) sepia(1%) brightness(63%) saturate(280%) contrast(144%);
+  -webkit-filter: sepia(1%) blur(0) brightness(63%) saturate(280%)
+    contrast(144%);
+  -moz-filter: sepia(1%) brightness(63%) saturate(280%) contrast(144%)
+    blur(0);
+  
+}
+.info {
+  margin: auto;
+  text-align: center;
+}
+.info > h2 {
+  margin-left: -20px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
